@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d6923b17-e614-48cd-937b-777dd214e4d8}</ProjectGuid>
-    <RootNamespace>동물카드뒤집기게임</RootNamespace>
+    <ProjectGuid>{6458acba-7ba2-401d-b10d-8049fcfd023d}</ProjectGuid>
+    <RootNamespace>무인자판기프로그램</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="동물카드 뒤집기 게임.c" />
+    <ClCompile Include="무인자판기 프로그램.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
