@@ -4,12 +4,11 @@
 
 // 전역변수
 int arrayAnimal[4][5]; // 카드 지도 배열(카드 20장)
-char* strAnimal[10]; // 동물 이름 배열
+char* strAnimal[10] = { "원숭이", "하마", "강아지", "고양이", "돼지", "코끼리", "기린", "낙타", "타조", "호랑이" }; 
 int checkAnimal[4][5]; // 카드 뒷면, 앞면 확인 배열
 
 // 함수 선언
 void initAnimalArray();
-void initAnimalName();
 void shuffleAnimal();
 int getEmptyPosition();
 int conv_pos_x(int x);
@@ -42,10 +41,8 @@ int main(void) {
         int secondSelect_x = conv_pos_x(select2);
         int secondSelect_y = conv_pos_y(select2);
         // 두 카드가 같은 동물이고 뒷면인 경우
-        if ((checkAnimal[firstSelect_x][firstSelect_y] == 0
-            && checkAnimal[secondSelect_x][secondSelect_y] == 0)
-            && (arrayAnimal[firstSelect_x][firstSelect_y] ==
-                arrayAnimal[secondSelect_x][secondSelect_y])) {
+        if ((checkAnimal[firstSelect_x][firstSelect_y] == 0 && checkAnimal[secondSelect_x][secondSelect_y] == 0)
+            && (arrayAnimal[firstSelect_x][firstSelect_y] == arrayAnimal[secondSelect_x][secondSelect_y])) {
             printf("\n\n빙고! %s 발견\n\n", strAnimal[arrayAnimal[firstSelect_x][firstSelect_y]]);
             checkAnimal[firstSelect_x][firstSelect_y] = 1;
             checkAnimal[secondSelect_x][secondSelect_y] = 1;
@@ -73,20 +70,6 @@ void initAnimalArray() {
             arrayAnimal[i][j] = -1; // 카드 뒷면 설정
         }
     }
-}
-
-// 동물 이름 배열 초기화 함수 
-void initAnimalName() {
-    strAnimal[0] = "원숭이";
-    strAnimal[1] = "하마";
-    strAnimal[2] = "강아지";
-    strAnimal[3] = "고양이";
-    strAnimal[4] = "돼지";
-    strAnimal[5] = "코끼리";
-    strAnimal[6] = "기린";
-    strAnimal[7] = "낙타";
-    strAnimal[8] = "타조";
-    strAnimal[9] = "호랑이";
 }
 
 // 카드 섞기 함수 

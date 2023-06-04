@@ -18,5 +18,8 @@
     <ClCompile Include="동물카드 뒤집기 게임.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="핵심코드.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
